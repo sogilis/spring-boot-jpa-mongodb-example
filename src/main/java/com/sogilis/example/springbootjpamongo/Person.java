@@ -1,4 +1,4 @@
-package com.sogilis.example.springbootjpamongo.domain;
+package com.sogilis.example.springbootjpamongo;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.data.mongodb.core.mapping.Document;

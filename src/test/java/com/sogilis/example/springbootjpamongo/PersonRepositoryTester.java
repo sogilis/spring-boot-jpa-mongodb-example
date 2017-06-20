@@ -1,9 +1,9 @@
-package com.sogilis.example.springbootjpamongo.domain;
-
-import static org.assertj.core.api.Assertions.assertThat;
+package com.sogilis.example.springbootjpamongo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import static org.assertj.core.api.Assertions.*;
 
 @Component
 public class PersonRepositoryTester {
@@ -13,8 +13,8 @@ public class PersonRepositoryTester {
 
     public void save_and_find() {
         System.out.println(personRepository.count());
-        Person arthur = personRepository.save(new Person("Arthur"));
-        Person personFound = personRepository.findOne(arthur.getId());
+        final Person arthur = personRepository.save(new Person("Arthur"));
+        final Person personFound = personRepository.findOne(arthur.getId());
         assertThat(personFound.getName()).isEqualTo("Arthur");
     }
 

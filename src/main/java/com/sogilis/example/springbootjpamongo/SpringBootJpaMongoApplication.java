@@ -7,9 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 
-import com.sogilis.example.springbootjpamongo.domain.Person;
-import com.sogilis.example.springbootjpamongo.domain.PersonRepository;
-
 @SpringBootApplication
 public class SpringBootJpaMongoApplication {
 
