@@ -12,14 +12,6 @@ import javax.persistence.Id;
 @Document
 public class Person {
 
-    public Person() {
-        // Required by Hibernate
-    }
-
-    public Person(final String name) {
-        this.name = name;
-    }
-
     @Id
     @org.springframework.data.annotation.Id
     @GeneratedValue(generator = "system-uuid")
@@ -28,6 +20,14 @@ public class Person {
 
     @Column(nullable = false)
     private String name;
+
+    public Person() {
+        // Required by Hibernate
+    }
+
+    public Person(final String name) {
+        this.name = name;
+    }
 
     public String getId() {
         return id;

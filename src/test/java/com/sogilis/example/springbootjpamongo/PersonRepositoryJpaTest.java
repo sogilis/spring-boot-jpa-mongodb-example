@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 @SpringBootTest
 @Transactional
 @ActiveProfiles("jpa")
-public class personRepositoryJpaTest {
+public class PersonRepositoryJpaTest {
 
     @Autowired
     private PersonRepositoryTester personRepositoryTester;
