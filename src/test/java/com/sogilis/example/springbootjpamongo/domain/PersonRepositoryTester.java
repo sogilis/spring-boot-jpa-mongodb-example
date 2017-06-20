@@ -1,23 +1,16 @@
-package com.sogilis.example.springbootjpamongo;
+package com.sogilis.example.springbootjpamongo.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.stereotype.Component;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-@Transactional
-public class PersonRepositoryTest {
+@Component
+public class PersonRepositoryTester {
 
     @Autowired
     private PersonRepository personRepository;
 
-    @Test
     public void save_and_find() {
         System.out.println(personRepository.count());
         Person arthur = personRepository.save(new Person("Arthur"));

@@ -18,16 +18,20 @@ apply plugin: 'org.springframework.boot'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
+bootRun {
+    systemProperties System.properties
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-    //compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
     compile 'org.postgresql:postgresql:9.4-1206-jdbc42'
     testCompile 'com.h2database:h2'
-    //testCompile 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
+    testCompile 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'org.assertj:assertj-core:3.6.2'
 }

@@ -1,4 +1,4 @@
-package com.sogilis.example.springbootjpamongo;
+package com.sogilis.example.springbootjpamongo.domain;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

@@ -9,7 +9,7 @@ This application demonstrate how to build a Spring Boot application which can sw
 # How to run application with JPA (PostgreSQL database)
 
 ```bash
-./scripts/start_app.sh
+./scripts/start_app.sh jpa
 ```
 
 This will start PostgreSQL database through a docker image (`docker/postgres.yml`), and then, start the application.
@@ -26,6 +26,16 @@ Then, you can stop PostgresSQL docker image with:
 
 ```bash
 ./scripts/stop_postgres.sh
+```
+
+# How to run application with MongoDB
+
+```bash
+./scripts/start_app.sh mongodb
+```
+
+```bash
+./scripts/stop_mongodb.sh
 ```
 
 # How to run all tests

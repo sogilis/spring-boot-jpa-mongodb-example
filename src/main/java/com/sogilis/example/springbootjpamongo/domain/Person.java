@@ -1,6 +1,7 @@
-package com.sogilis.example.springbootjpamongo;
+package com.sogilis.example.springbootjpamongo.domain;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
+@Document
 public class Person {
 
     public Person() {
@@ -19,6 +21,7 @@ public class Person {
     }
 
     @Id
+    @org.springframework.data.annotation.Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;

@@ -6,10 +6,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import com.sogilis.example.springbootjpamongo.domain.Person;
+import com.sogilis.example.springbootjpamongo.domain.PersonRepository;
 
 @SpringBootApplication
-@EnableJpaRepositories
 public class SpringBootJpaMongoApplication {
 
     @Autowired
@@ -24,10 +25,11 @@ public class SpringBootJpaMongoApplication {
     public CommandLineRunner onApplicationStart() {
         return args -> {
             System.out.println("--------------------------------------------");
+            personRepository.deleteAll();
             personRepository.save(new Person("Perceval"));
             personRepository.save(new Person("Karadoc"));
 
-            System.out.println("People found:");
+            System.out.println(personRepository.count() + " people found:");
             personRepository.findAll().forEach(person -> System.out.println(person.getName()));
             System.out.println("--------------------------------------------");
         };
