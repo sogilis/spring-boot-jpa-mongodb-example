@@ -9,6 +9,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+// or, to load only beans involved with MongoDB + PersonRepositoryTester
+// @DataMongoTest(includeFilters = @ComponentScan.Filter(type =
+// FilterType.ASSIGNABLE_TYPE, classes = PersonRepositoryTester.class))
 @ActiveProfiles("mongodb")
 public class PersonRepositoryMongoTest {
 

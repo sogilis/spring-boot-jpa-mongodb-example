@@ -10,6 +10,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+// or, to load only beans involved with JPA + PersonRepositoryTester
+// @DataJpaTest(includeFilters = @ComponentScan.Filter(type =
+// FilterType.ASSIGNABLE_TYPE, classes = PersonRepositoryTester.class))
 @Transactional
 @ActiveProfiles("jpa")
 public class PersonRepositoryJpaTest {
