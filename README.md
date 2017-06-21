@@ -2,18 +2,17 @@
 
 This application demonstrate how to build a Spring Boot application which can switch between JPA and MongoDB with only configuration changes.
 
-# Prerequisite
+## Prerequisites
 
-- [Docker-compose](https://docs.docker.com/compose/)
+- [Docker](https://docs.docker.com/)
 
-# How to run application with JPA (PostgreSQL database)
+## Run with JPA (PostgreSQL database)
 
 ```bash
-./scripts/start_app.sh jpa
+./start_app.sh jpa
 ```
 
-This will start PostgreSQL database through a docker image (`docker/postgres.yml`), and then, start the application.
-
+This will start PostgreSQL database through a docker image (`postgres:9.6`), and then start the application.
 If you see following message, it means the application works great:
 
 ```text
@@ -22,23 +21,13 @@ Perceval
 Karadoc
 ```
 
-Then, you can stop PostgresSQL docker image with:
+## Run with MongoDB
 
 ```bash
-./scripts/stop_postgres.sh
+./start_app.sh mongodb
 ```
 
-# How to run application with MongoDB
-
-```bash
-./scripts/start_app.sh mongodb
-```
-
-```bash
-./scripts/stop_mongodb.sh
-```
-
-# How to run all tests
+## Run all tests
 
 ```bash
 ./gradlew check
