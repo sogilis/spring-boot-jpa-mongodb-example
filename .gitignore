@@ -1,6 +1,7 @@
 # Gradle files
 .gradle
 /build/
+/classes/
 
 # IntelliJ project files
 .idea
