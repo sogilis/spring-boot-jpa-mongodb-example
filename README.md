@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sogilis/spring-boot-jpa-mongodb-example.svg?branch=master)](https://travis-ci.org/sogilis/spring-boot-jpa-mongodb-example)
+
 # Spring boot + JPA + MongoDB application sample
 
 This application demonstrate how to build a Spring Boot application which can switch between JPA and MongoDB with only configuration changes.
